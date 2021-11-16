@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div
+    class="p-grid app-container p-lg-offset-2 p-md-offset-2 p-shadow-6 p-mt-6"
+  >
+    <div class="p-col-12 p-md-4 p-lg-4 info-container-bg">
+      <InfoContainer />
+    </div>
+    <div class="p-col-12 p-md-8 p-lg-8">
+      <CheckoutContainer />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import CheckoutContainer from "./components/checkout-section/CheckoutContainer.vue";
+import InfoContainer from "./components/info-section/InfoContainer.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    CheckoutContainer,
+    InfoContainer,
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+body {
+  background-color: #9fa8da;
+  font-family: Nunito;
+}
+.app-container {
+  background-color: #ffffff;
+  width: 60%;
+}
+.info-container-bg {
+  background-color: #eceff1;
 }
 </style>
